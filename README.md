@@ -2,9 +2,9 @@
 The Third part of the task is submitted in Facebook-Project.
 
 It is an automation testing project using Selenium C# built on Visual Studio. 
-It consists of 
+It consists of:
 1- Program.cs which contains the basic functions needed to conduct the tests. 
-2- Nunit.cs which contains 
+2- Nunit.cs which contains Nunit setup
 3- Login.cs which contains the login scenario
 4- Register.cs which contains the register scenario 
 
