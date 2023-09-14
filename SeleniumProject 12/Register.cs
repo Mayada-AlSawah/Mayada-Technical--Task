@@ -13,26 +13,38 @@ namespace FacebookAutomationTask
 {
     class Register
     {
-        IWebDriver webDriver;
+        IWebDriver driver;
         [SetUp]
         public void InitializeBrowser()
         {
-            webDriver = new ChromeDriver();
-            webDriver.Navigate().GoToUrl("www.facebook.com/");
+            driver = new ChromeDriver();
+            driver.Navigate().GoToUrl("www.facebook.com/");
         }
 
 
         [Test]
+        public void InvalidRegisterCredentials(String username, String password)
+        {
+            //arrange 
+            driver.FindElement(By.Id("email")).SendKeys(username);
+            driver.FindElement(By.Id("pass")).SendKeys(password);
+            driver.FindElement(By.Id("loginbutton")).Click();
+            //act 
+            //driver.Click_Elementv
 
+            //assert
+            //Assert.assertTrue("User logged in successfully? ", driver.getTitle().trim().equals("expected title");
+            // Assert.IsFalse(driver.FindElement(By.Id("Home")));
+
+        }
 
         [TearDown]
         public void CloseBrowser()
         {
-            webDriver.Close();
+            driver.Close();
         }
 
-
-
+        //@DataProvider(name= “searchProvider”);
         public Object[][] PassData()
         {
             Object[][] data = new Object[1][];

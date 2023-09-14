@@ -14,8 +14,9 @@ namespace FacebookAutomationTask
 {
     class Program
     {
-        public static void Navigate_To(string[] args)
+        public static void Main ()
         {
+           
             IWebDriver webDriver = new ChromeDriver();
             webDriver.Navigate().GoToUrl("https://www.facebook.com");
 

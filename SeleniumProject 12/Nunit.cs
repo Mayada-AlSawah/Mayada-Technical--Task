@@ -17,7 +17,7 @@ namespace FacebookAutomationTask
         {
             webDriver = new ChromeDriver();
         }
-        
+
         [TearDown]
         public void CloseBrowser()
         {
